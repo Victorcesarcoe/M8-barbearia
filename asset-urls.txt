@@ -1,0 +1,16 @@
+Uploading file (webdev private): /home/ubuntu/webdev-static-assets/on-men/interior.jpeg (size: 181628 bytes)
+File uploaded successfully!
+Storage Path: /manus-storage/interior_253142cf.jpeg
+Uploading file (webdev private): /home/ubuntu/webdev-static-assets/on-men/fachada1.jpeg (size: 138700 bytes)
+File uploaded successfully!
+Storage Path: /manus-storage/fachada1_ed6a2ad8.jpeg
+Uploading file (webdev private): /home/ubuntu/webdev-static-assets/on-men/CORTE1.jpg (size: 24307 bytes)
+File uploaded successfully!
+Storage Path: /manus-storage/CORTE1_1ab034bd.jpg
+
+========== Upload Summary ==========
+[SUCCESS] /home/ubuntu/webdev-static-assets/on-men/interior.jpeg -> /manus-storage/interior_253142cf.jpeg
+[SUCCESS] /home/ubuntu/webdev-static-assets/on-men/fachada1.jpeg -> /manus-storage/fachada1_ed6a2ad8.jpeg
+[SUCCESS] /home/ubuntu/webdev-static-assets/on-men/CORTE1.jpg -> /manus-storage/CORTE1_1ab034bd.jpg
+=====================================
+Total: 3, Success: 3, Failed: 0
