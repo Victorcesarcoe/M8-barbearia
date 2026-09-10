@@ -356,7 +356,7 @@ function Home() {
 
         <section className="values-strip" aria-label="Valores do Stúdio M8">
           <div className="values-marquee">
-            {["ESTILO", "PRECISÃO", "PRESENÇA", "EXPERIÊNCIA", "ESTILO", "PRECISÃO", "PRESENÇA"].map((item, index) => (
+            {["ESTILO", "PRECISÃO", "PRESENÇA", "EXPERIÊNCIA", "ESTILO", "PRECISÃO", "PRESENÇA", "EXPERIÊNCIA"].map((item, index) => (
               <span key={`${item}-${index}`}>{item}<i>✦</i></span>
             ))}
           </div>
