@@ -128,6 +128,10 @@ function Home() {
     window.open(url, "_blank", "noopener,noreferrer");
   };
 
+  const requestScheduling = () => {
+    window.open(CONTACT.bookingUrl, "_blank", "noopener,noreferrer");
+  };
+
   useEffect(() => {
     document.body.style.overflow = loading || menuOpen || lightbox !== null ? "hidden" : "";
     return () => {
@@ -273,7 +277,7 @@ function Home() {
         <nav className="desktop-nav" aria-label="Navegação principal">
           {NAV_ITEMS.map(([label, href]) => <a key={href} href={href}>{label}</a>)}
         </nav>
-        <button className="header-cta" onClick={requestBooking}>Agendar horário <ArrowRight size={15} /></button>
+        <button className="header-cta" onClick={requestScheduling}>Agendar horário <ArrowRight size={15} /></button>
         <button className="menu-toggle" onClick={() => setMenuOpen(true)} aria-label="Abrir menu"><Menu /></button>
       </header>
 
@@ -300,7 +304,7 @@ function Home() {
             </h1>
             <p className="hero-copy">Mais do que um corte. Uma experiência feita para homens que valorizam presença, precisão e estilo.</p>
             <div className="hero-actions">
-              <MagneticLink onClick={requestBooking}>Agendar horário</MagneticLink>
+              <MagneticLink onClick={requestScheduling}>Agendar horário</MagneticLink>
               <MagneticLink href="#barbearia" secondary>Conhecer o Stúdio M8</MagneticLink>
             </div>
           </div>
@@ -456,7 +460,7 @@ function Home() {
               <div className="contact-lines" data-reveal>
                 <div><span>Endereço</span><p>{CONTACT.address}</p></div>
                 <div><span>Horário</span><p>{CONTACT.hours}</p></div>
-                <div><span>WhatsApp</span><button onClick={requestBooking}>Número a configurar <ArrowRight /></button></div>
+                <div><span>WhatsApp</span><button onClick={requestBooking}>{CONTACT.whatsappDisplay} <ArrowRight /></button></div>
                 <div><span>Instagram</span><p>{CONTACT.instagramHandle}</p></div>
               </div>
               <MagneticLink onClick={() => toast("Mapa em configuração", { description: "Adicione a morada real em client/src/brand.ts." })}>Como chegar</MagneticLink>
@@ -478,7 +482,7 @@ function Home() {
             <span>O próximo capítulo</span>
             <h2>Seu próximo<br />visual começa aqui.</h2>
             <p>Agende o seu horário e viva a experiência Stúdio M8.</p>
-            <MagneticLink onClick={requestBooking}>Agendar horário</MagneticLink>
+            <MagneticLink onClick={requestScheduling}>Agendar horário</MagneticLink>
           </div>
         </section>
       </main>
@@ -499,7 +503,7 @@ function Home() {
       <button className="whatsapp-float" onClick={requestBooking} aria-label="Agendar pelo WhatsApp">
         <MessageCircle /><span>Agendar pelo WhatsApp</span>
       </button>
-      <button className="mobile-sticky-book" onClick={requestBooking}>Agendar horário <ArrowRight /></button>
+      <button className="mobile-sticky-book" onClick={requestScheduling}>Agendar horário <ArrowRight /></button>
 
       {lightbox !== null && (
         <div className="lightbox" role="dialog" aria-modal="true" aria-label="Galeria ampliada">

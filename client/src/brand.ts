@@ -15,13 +15,17 @@ export const ASSETS = {
 
 export const CONTACT: {
   whatsappNumber: string;
+  whatsappDisplay: string;
+  bookingUrl: string;
   instagramUrl: string;
   instagramHandle: string;
   address: string;
   hours: string;
   mapUrl: string;
 } = {
-  whatsappNumber: "",
+  whatsappNumber: "5521995762148",
+  whatsappDisplay: "+55 21 99576-2148",
+  bookingUrl: "https://cashbarber.com.br/studiom8/login",
   instagramUrl: "",
   instagramHandle: "Instagram a configurar",
   address: "Morada a configurar",
