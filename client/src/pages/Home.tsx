@@ -39,6 +39,14 @@ const GALLERY = [
   { src: ASSETS.facade, alt: "Fachada real do Stúdio M8 — Unidade Cachambi", tag: "O espaço" },
 ] as const;
 
+const GALLERY_BONSUCESSO = [
+  { src: ASSETS.bonsucessoInterior1, alt: "Interior real do Stúdio M8 — Unidade Bonsucesso", tag: "Recepção" },
+  { src: ASSETS.bonsucessoInterior2, alt: "Corredor de atendimento do Stúdio M8 — Unidade Bonsucesso", tag: "O salão" },
+  { src: ASSETS.bonsucessoInterior3, alt: "Identidade visual do Stúdio M8 — Unidade Bonsucesso", tag: "Os detalhes" },
+] as const;
+
+const GALLERY_ALL = [...GALLERY, ...GALLERY_BONSUCESSO];
+
 function BrandLockup({ compact = false }: { compact?: boolean }) {
   return (
     <a className="brand-lockup" href="#inicio" aria-label="Stúdio M8 — voltar ao início">
@@ -401,6 +409,15 @@ function Home() {
                 </button>
               ))}
             </div>
+            <p className="gallery-subheading" data-reveal>Unidade Bonsucesso</p>
+            <div className="gallery-grid-more">
+              {GALLERY_BONSUCESSO.map((image, index) => (
+                <button key={image.src} className="gallery-item" onClick={() => setLightbox(GALLERY.length + index)} data-cursor="view">
+                  <img src={image.src} alt={image.alt} loading="lazy" />
+                  <span><b>0{GALLERY.length + index + 1}</b>{image.tag}<MoveUpRight /></span>
+                </button>
+              ))}
+            </div>
           </div>
         </section>
 
@@ -493,9 +510,9 @@ function Home() {
       {lightbox !== null && (
         <div className="lightbox" role="dialog" aria-modal="true" aria-label="Galeria ampliada">
           <button className="lightbox-close" onClick={() => setLightbox(null)} aria-label="Fechar galeria"><X /></button>
-          <button className="lightbox-prev" onClick={() => setLightbox((lightbox + GALLERY.length - 1) % GALLERY.length)} aria-label="Imagem anterior"><ChevronLeft /></button>
-          <figure><img src={GALLERY[lightbox].src} alt={GALLERY[lightbox].alt} /><figcaption><span>0{lightbox + 1} / 03</span><strong>{GALLERY[lightbox].tag}</strong></figcaption></figure>
-          <button className="lightbox-next" onClick={() => setLightbox((lightbox + 1) % GALLERY.length)} aria-label="Próxima imagem"><ChevronRight /></button>
+          <button className="lightbox-prev" onClick={() => setLightbox((lightbox + GALLERY_ALL.length - 1) % GALLERY_ALL.length)} aria-label="Imagem anterior"><ChevronLeft /></button>
+          <figure><img src={GALLERY_ALL[lightbox].src} alt={GALLERY_ALL[lightbox].alt} /><figcaption><span>0{lightbox + 1} / 0{GALLERY_ALL.length}</span><strong>{GALLERY_ALL[lightbox].tag}</strong></figcaption></figure>
+          <button className="lightbox-next" onClick={() => setLightbox((lightbox + 1) % GALLERY_ALL.length)} aria-label="Próxima imagem"><ChevronRight /></button>
         </div>
       )}
     </div>

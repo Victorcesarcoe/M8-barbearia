@@ -11,6 +11,9 @@ export const ASSETS = {
   monogram: "/brand/studio-m8-logo.png",
   grainField: "/manus-storage/onmen-grain-field_9a46c75c.jpg",
   precisionLines: "/manus-storage/onmen-precision-lines_fbe36f0c.png",
+  bonsucessoInterior1: "/brand/interior-bonsucesso-1.jpg",
+  bonsucessoInterior2: "/brand/interior-bonsucesso-2.jpg",
+  bonsucessoInterior3: "/brand/interior-bonsucesso-3.jpg",
 } as const;
 
 export const CONTACT: {
