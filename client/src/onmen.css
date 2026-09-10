@@ -173,7 +173,7 @@ h1, h2, h3 { font-family: "Bebas Neue", sans-serif; font-weight: 400; text-trans
 
 .experience { position: relative; min-height: 115svh; overflow: hidden; display: flex; align-items: center; }
 .experience-photo,.experience-photo img,.experience-shade { position: absolute; inset: 0; width: 100%; height: 100%; }
-.experience-photo img { object-fit: cover; }
+.experience-photo img { object-fit: cover; opacity: .5; }
 .experience-shade { background: linear-gradient(90deg,#000000e6,#00000038 65%,#0000007a),linear-gradient(0deg,#000000b8,transparent 45%); }
 .experience-content { position: relative; z-index: 1; }
 .experience-content h2 { display: flex; flex-direction: column; font-size: clamp(95px,13.5vw,225px); line-height: .74; letter-spacing: -.035em; }
