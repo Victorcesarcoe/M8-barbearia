@@ -36,7 +36,7 @@ const NAV_ITEMS = [
 const GALLERY = [
   { src: ASSETS.interior, alt: "Interior real do Stúdio M8 com profissionais e clientes", tag: "O ritual" },
   { src: ASSETS.haircut, alt: "Corte masculino executado no Stúdio M8", tag: "A precisão" },
-  { src: ASSETS.facade, alt: "Fachada real do Stúdio M8 | Barbearia", tag: "O espaço" },
+  { src: ASSETS.facade, alt: "Fachada real do Stúdio M8 — Unidade Cachambi", tag: "O espaço" },
 ] as const;
 
 function BrandLockup({ compact = false }: { compact?: boolean }) {
@@ -325,8 +325,8 @@ function Home() {
                 <span>STÚDIO M8 | BARBEARIA · EST. —</span>
               </div>
               <figure className="about-photo-wrap parallax-media" data-cursor="view">
-                <img src={ASSETS.facade} alt="Fachada real do Stúdio M8 | Barbearia" />
-                <figcaption><b>O espaço</b><span>Fachada Stúdio M8</span></figcaption>
+                <img src={ASSETS.facade} alt="Fachada real do Stúdio M8 — Unidade Cachambi" />
+                <figcaption><b>O espaço</b><span>Fachada Cachambi</span></figcaption>
               </figure>
               <div className="about-note" data-reveal><Scissors strokeWidth={1} /><p>Um lugar pensado para transformar cuidado em presença.</p></div>
             </div>
@@ -450,8 +450,7 @@ function Home() {
             <div className="map-placeholder-stack">
               {LOCATIONS.map((loc) => (
                 <a className="map-placeholder" href={loc.mapUrl} target="_blank" rel="noopener noreferrer" data-reveal key={loc.name}>
-                  <div className="map-grid-lines" />
-                  <div className="map-crosshair" aria-hidden="true"><i /><i /></div>
+                  <img src={loc.facade} alt={`Fachada real do Stúdio M8 — Unidade ${loc.name}`} loading="lazy" />
                   <p>{loc.name}</p>
                   <span>VER NO GOOGLE MAPS</span>
                 </a>

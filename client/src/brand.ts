@@ -5,7 +5,7 @@
 
 export const ASSETS = {
   interior: "/manus-storage/interior_253142cf.jpeg",
-  facade: "/manus-storage/fachada1_ed6a2ad8.jpeg",
+  facade: "/brand/fachada-cachambi.jpg",
   haircut: "/manus-storage/CORTE1_1ab034bd.jpg",
   monogram: "/brand/studio-m8-logo.png",
   grainField: "/manus-storage/onmen-grain-field_9a46c75c.jpg",
@@ -32,12 +32,14 @@ export const LOCATIONS = [
     address: "R. Cirne Maia, 78 - Lj F - Cachambi, Rio de Janeiro - RJ, 20771-410",
     hours: "Seg a Sex: 10:00–20:00 · Sáb: 10:00–19:00 · Dom: Fechado",
     mapUrl: "https://share.google/QxYjkyzLjbn7F4EGj",
+    facade: "/brand/fachada-cachambi.jpg",
   },
   {
     name: "Bonsucesso",
     address: "Av. Nova York, 138 - Bonsucesso, Rio de Janeiro - RJ, 21041-040",
     hours: "Seg a Sex: 10:00–20:00 · Sáb: 10:00–19:00 · Dom: Fechado",
     mapUrl: "https://share.google/THvrHlvyLdEWUI02l",
+    facade: "/brand/fachada-bonsucesso.jpg",
   },
 ] as const;
 

@@ -234,16 +234,12 @@ h1, h2, h3 { font-family: "Bebas Neue", sans-serif; font-weight: 400; text-trans
 .map-placeholder-stack { display: flex; flex-direction: column; gap: 14px; height: 680px; }
 .map-placeholder-stack .map-placeholder { flex: 1; height: auto; }
 .map-placeholder { cursor: pointer; }
-.map-placeholder { position: relative; height: 680px; overflow: hidden; background: #111; color: var(--paper); display: flex; flex-direction: column; align-items: center; justify-content: center; }
-.map-grid-lines { position: absolute; inset: 0; opacity: .22; background-image: linear-gradient(#ffffff33 1px,transparent 1px),linear-gradient(90deg,#ffffff33 1px,transparent 1px); background-size: 75px 75px; transform: perspective(500px) rotateX(55deg) scale(1.55); }
-.map-crosshair { position: relative; width: 82px; height: 82px; margin-bottom: 28px; border: 1px solid #b8a17870; border-radius: 50%; }
-.map-crosshair::before,.map-crosshair::after,.map-crosshair i { content: ""; position: absolute; background: var(--champagne); }
-.map-crosshair::before { width: 1px; height: 120px; top: -19px; left: 40px; }
-.map-crosshair::after { height: 1px; width: 120px; left: -19px; top: 40px; }
-.map-crosshair i:first-child { width: 6px; height: 1px; left: 38px; top: 40px; }
-.map-crosshair i:last-child { height: 6px; width: 1px; left: 40px; top: 38px; }
+.map-placeholder { position: relative; height: 680px; overflow: hidden; background: #111; color: var(--paper); display: flex; flex-direction: column; align-items: center; justify-content: flex-end; padding-bottom: 32px; text-decoration: none; }
+.map-placeholder img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; filter: saturate(.85) brightness(.82); transition: transform 1.05s var(--ease-out),filter .6s; }
+.map-placeholder::after { content: ""; position: absolute; inset: 0; background: linear-gradient(0deg,#000000c4,transparent 55%); }
+.map-placeholder:hover img { transform: scale(1.045); filter: saturate(1) brightness(.9); }
 .map-placeholder p { position: relative; font: 34px "Bebas Neue"; text-transform: uppercase; }
-.map-placeholder > span { position: relative; color: #89857e; font-size: 8px; letter-spacing: .22em; margin-top: 10px; }
+.map-placeholder > span { position: relative; color: var(--champagne); font-size: 8px; letter-spacing: .22em; margin-top: 10px; }
 
 .final-cta { position: relative; min-height: 95svh; overflow: hidden; display: grid; place-items: center; text-align: center; }
 .final-cta > img:first-child,.final-cta-shade,.final-lines { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
