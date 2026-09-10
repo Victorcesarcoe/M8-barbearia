@@ -4,7 +4,8 @@
  */
 
 export const ASSETS = {
-  interior: "/manus-storage/interior_253142cf.jpeg",
+  interior: "/brand/interior-cachambi.jpg",
+  interiorDetail: "/brand/interior-cachambi-detail.jpg",
   facade: "/brand/fachada-cachambi.jpg",
   haircut: "/manus-storage/CORTE1_1ab034bd.jpg",
   monogram: "/brand/studio-m8-logo.png",

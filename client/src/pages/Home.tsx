@@ -34,7 +34,7 @@ const NAV_ITEMS = [
 ] as const;
 
 const GALLERY = [
-  { src: ASSETS.interior, alt: "Interior real do Stúdio M8 com profissionais e clientes", tag: "O ritual" },
+  { src: ASSETS.interior, alt: "Interior real do Stúdio M8 — Unidade Cachambi", tag: "O ritual" },
   { src: ASSETS.haircut, alt: "Corte masculino executado no Stúdio M8", tag: "A precisão" },
   { src: ASSETS.facade, alt: "Fachada real do Stúdio M8 — Unidade Cachambi", tag: "O espaço" },
 ] as const;
@@ -293,7 +293,7 @@ function Home() {
 
       <main>
         <section id="inicio" className="hero">
-          <img className="hero-photo" src={ASSETS.interior} alt="Interior real do Stúdio M8 | Barbearia durante o atendimento" />
+          <img className="hero-photo" src={ASSETS.interior} alt="Interior real do Stúdio M8 — Unidade Cachambi" />
           <div className="hero-shade" />
           <img className="precision-overlay" src={ASSETS.precisionLines} alt="" aria-hidden="true" />
           <div className="hero-content">
@@ -376,7 +376,7 @@ function Home() {
 
         <section id="experiencia" className="experience">
           <div className="experience-photo parallax-media">
-            <img src={ASSETS.interior} alt="Ambiente e atendimento reais no interior do Stúdio M8" />
+            <img src={ASSETS.interiorDetail} alt="Detalhe da identidade visual do Stúdio M8 — Unidade Cachambi" />
             <div className="experience-shade" />
           </div>
           <div className="experience-content content-wide">
@@ -411,7 +411,7 @@ function Home() {
               <h2>Um espaço<br />pensado<br /><em>para você.</em></h2>
             </div>
             <div className="space-image-panel">
-              <img src={ASSETS.interior} alt="Vista ampla do espaço interior do Stúdio M8" loading="lazy" />
+              <img src={ASSETS.interior} alt="Vista ampla do interior do Stúdio M8 — Unidade Cachambi" loading="lazy" />
               <span>AMBIENTE REAL · STÚDIO M8</span>
             </div>
             <div className="space-word-panel space-index-panel">
@@ -460,7 +460,7 @@ function Home() {
         </section>
 
         <section className="final-cta">
-          <img src={ASSETS.interior} alt="Interior do Stúdio M8 | Barbearia" loading="lazy" />
+          <img src={ASSETS.interior} alt="Interior do Stúdio M8 — Unidade Cachambi" loading="lazy" />
           <div className="final-cta-shade" />
           <img className="final-lines" src={ASSETS.precisionLines} alt="" aria-hidden="true" />
           <div className="final-cta-content" data-reveal>
