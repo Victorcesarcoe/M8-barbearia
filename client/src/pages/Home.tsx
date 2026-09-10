@@ -1,6 +1,6 @@
 /**
  * Direção: Clube Editorial Cinematográfico — composição assimétrica, preto dominante,
- * tipografia monumental, imagens reais da ON MEN e movimento de precisão.
+ * tipografia monumental, imagens reais do Stúdio M8 e movimento de precisão.
  */
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { animate } from "animejs";
@@ -34,17 +34,17 @@ const NAV_ITEMS = [
 ] as const;
 
 const GALLERY = [
-  { src: ASSETS.interior, alt: "Interior real da ON MEN com profissionais e clientes", tag: "O ritual" },
-  { src: ASSETS.haircut, alt: "Corte masculino executado na ON MEN", tag: "A precisão" },
-  { src: ASSETS.facade, alt: "Fachada real da ON MEN Barbearia", tag: "O espaço" },
+  { src: ASSETS.interior, alt: "Interior real do Stúdio M8 com profissionais e clientes", tag: "O ritual" },
+  { src: ASSETS.haircut, alt: "Corte masculino executado no Stúdio M8", tag: "A precisão" },
+  { src: ASSETS.facade, alt: "Fachada real do Stúdio M8 | Barbearia", tag: "O espaço" },
 ] as const;
 
 function BrandLockup({ compact = false }: { compact?: boolean }) {
   return (
-    <a className="brand-lockup" href="#inicio" aria-label="ON MEN — voltar ao início">
+    <a className="brand-lockup" href="#inicio" aria-label="Stúdio M8 — voltar ao início">
       <img src={ASSETS.monogram} alt="" aria-hidden="true" />
       <span className="brand-type">
-        <strong>ON MEN</strong>
+        <strong>STÚDIO M8</strong>
         {!compact && <small>BARBEARIA</small>}
       </span>
     </a>
@@ -261,7 +261,7 @@ function Home() {
       <div className={`preloader ${loading ? "is-visible" : "is-done"}`} aria-hidden={!loading}>
         <div className="preloader-brand">
           <img src={ASSETS.monogram} alt="" />
-          <strong>ON MEN</strong>
+          <strong>STÚDIO M8</strong>
           <span>BARBEARIA</span>
         </div>
         <div className="preloader-rule"><i style={{ transform: `scaleX(${loadValue / 100})` }} /></div>
@@ -289,11 +289,11 @@ function Home() {
 
       <main>
         <section id="inicio" className="hero">
-          <img className="hero-photo" src={ASSETS.interior} alt="Interior real da ON MEN Barbearia durante o atendimento" />
+          <img className="hero-photo" src={ASSETS.interior} alt="Interior real do Stúdio M8 | Barbearia durante o atendimento" />
           <div className="hero-shade" />
           <img className="precision-overlay" src={ASSETS.precisionLines} alt="" aria-hidden="true" />
           <div className="hero-content">
-            <p className="hero-kicker"><span /> ON MEN BARBEARIA</p>
+            <p className="hero-kicker"><span /> STÚDIO M8 | BARBEARIA</p>
             <h1>
               <span className="hero-title-line">Seu estilo.</span>
               <span className="hero-title-line is-outline">Sua presença.</span>
@@ -301,7 +301,7 @@ function Home() {
             <p className="hero-copy">Mais do que um corte. Uma experiência feita para homens que valorizam presença, precisão e estilo.</p>
             <div className="hero-actions">
               <MagneticLink onClick={requestBooking}>Agendar horário</MagneticLink>
-              <MagneticLink href="#barbearia" secondary>Conhecer a ON MEN</MagneticLink>
+              <MagneticLink href="#barbearia" secondary>Conhecer o Stúdio M8</MagneticLink>
             </div>
           </div>
           <div className="hero-index" aria-hidden="true"><b>01</b><span>/</span><small>08</small></div>
@@ -310,26 +310,26 @@ function Home() {
 
         <section id="barbearia" className="about section-pad">
           <div className="content-wide">
-            <SectionEyebrow index="01">A ON MEN</SectionEyebrow>
+            <SectionEyebrow index="01">O Stúdio M8</SectionEyebrow>
             <div className="about-grid">
               <div className="about-heading" data-reveal>
                 <h2>Não é apenas<br />um corte.</h2>
                 <p>É uma experiência.</p>
               </div>
               <div className="about-copy" data-reveal>
-                <p>Na ON MEN, cada detalhe foi pensado para transformar o cuidado masculino numa experiência de estilo, precisão e confiança.</p>
-                <span>ON MEN BARBEARIA · EST. —</span>
+                <p>No Stúdio M8, cada detalhe foi pensado para transformar o cuidado masculino numa experiência de estilo, precisão e confiança.</p>
+                <span>STÚDIO M8 | BARBEARIA · EST. —</span>
               </div>
               <figure className="about-photo-wrap parallax-media" data-cursor="view">
-                <img src={ASSETS.facade} alt="Fachada real da ON MEN Barbearia" />
-                <figcaption><b>O espaço</b><span>Fachada ON MEN</span></figcaption>
+                <img src={ASSETS.facade} alt="Fachada real do Stúdio M8 | Barbearia" />
+                <figcaption><b>O espaço</b><span>Fachada Stúdio M8</span></figcaption>
               </figure>
               <div className="about-note" data-reveal><Scissors strokeWidth={1} /><p>Um lugar pensado para transformar cuidado em presença.</p></div>
             </div>
           </div>
         </section>
 
-        <section className="values-strip" aria-label="Valores da ON MEN">
+        <section className="values-strip" aria-label="Valores do Stúdio M8">
           <div className="values-marquee">
             {["ESTILO", "PRECISÃO", "PRESENÇA", "EXPERIÊNCIA", "ESTILO", "PRECISÃO", "PRESENÇA"].map((item, index) => (
               <span key={`${item}-${index}`}>{item}<i>✦</i></span>
@@ -362,7 +362,7 @@ function Home() {
                 ))}
               </div>
               <aside className="service-visual" data-cursor="view">
-                <img src={ASSETS.haircut} alt="Detalhe de corte masculino realizado na ON MEN" />
+                <img src={ASSETS.haircut} alt="Detalhe de corte masculino realizado no Stúdio M8" />
                 <span>0{activeService + 1} / 06</span>
                 <p>{SERVICES[activeService].title}</p>
               </aside>
@@ -372,7 +372,7 @@ function Home() {
 
         <section id="experiencia" className="experience">
           <div className="experience-photo parallax-media">
-            <img src={ASSETS.interior} alt="Ambiente e atendimento reais no interior da ON MEN" />
+            <img src={ASSETS.interior} alt="Ambiente e atendimento reais no interior do Stúdio M8" />
             <div className="experience-shade" />
           </div>
           <div className="experience-content content-wide">
@@ -386,7 +386,7 @@ function Home() {
           <div className="content-wide">
             <SectionEyebrow index="04">Galeria</SectionEyebrow>
             <div className="gallery-heading" data-reveal>
-              <h2>A ON MEN<br />por dentro.</h2>
+              <h2>O Stúdio M8<br />por dentro.</h2>
               <p>Imagens reais. Técnica real. A experiência como ela acontece.</p>
             </div>
             <div className="gallery-grid">
@@ -407,8 +407,8 @@ function Home() {
               <h2>Um espaço<br />pensado<br /><em>para você.</em></h2>
             </div>
             <div className="space-image-panel">
-              <img src={ASSETS.interior} alt="Vista ampla do espaço interior da ON MEN" loading="lazy" />
-              <span>AMBIENTE REAL · ON MEN</span>
+              <img src={ASSETS.interior} alt="Vista ampla do espaço interior do Stúdio M8" loading="lazy" />
+              <span>AMBIENTE REAL · STÚDIO M8</span>
             </div>
             <div className="space-word-panel space-index-panel">
               <div className="space-index-head"><span>ONM / 04</span><p>QUATRO MEDIDAS DE UMA EXPERIÊNCIA</p></div>
@@ -430,7 +430,7 @@ function Home() {
           <img className="team-metal" src={ASSETS.metalSurface} alt="" aria-hidden="true" />
           <div className="content-wide">
             <SectionEyebrow index="06">Profissionais</SectionEyebrow>
-            <div className="team-heading" data-reveal><h2>Quem domina<br />o detalhe.</h2><p>Esta área está preparada para receber os profissionais reais da ON MEN, sem nomes ou perfis fictícios.</p></div>
+            <div className="team-heading" data-reveal><h2>Quem domina<br />o detalhe.</h2><p>Esta área está preparada para receber os profissionais reais do Stúdio M8, sem nomes ou perfis fictícios.</p></div>
             <div className="team-slots">
               {TEAM_SLOTS.map((slot) => (
                 <div className="team-slot" key={slot} data-reveal>
@@ -452,7 +452,7 @@ function Home() {
           <div className="content-wide location-grid">
             <div className="location-copy">
               <SectionEyebrow index="07">Localização</SectionEyebrow>
-              <h2 data-reveal>Encontre<br />a ON MEN.</h2>
+              <h2 data-reveal>Encontre<br />o Stúdio M8.</h2>
               <div className="contact-lines" data-reveal>
                 <div><span>Endereço</span><p>{CONTACT.address}</p></div>
                 <div><span>Horário</span><p>{CONTACT.hours}</p></div>
@@ -471,13 +471,13 @@ function Home() {
         </section>
 
         <section className="final-cta">
-          <img src={ASSETS.interior} alt="Interior da ON MEN Barbearia" loading="lazy" />
+          <img src={ASSETS.interior} alt="Interior do Stúdio M8 | Barbearia" loading="lazy" />
           <div className="final-cta-shade" />
           <img className="final-lines" src={ASSETS.precisionLines} alt="" aria-hidden="true" />
           <div className="final-cta-content" data-reveal>
             <span>O próximo capítulo</span>
             <h2>Seu próximo<br />visual começa aqui.</h2>
-            <p>Agende o seu horário e viva a experiência ON MEN.</p>
+            <p>Agende o seu horário e viva a experiência Stúdio M8.</p>
             <MagneticLink onClick={requestBooking}>Agendar horário</MagneticLink>
           </div>
         </section>
@@ -493,7 +493,7 @@ function Home() {
             <button onClick={requestBooking}>WhatsApp <MessageCircle /></button>
           </div>
         </div>
-        <div className="footer-bottom"><span>© 2026 ON MEN BARBEARIA.</span><span>TODOS OS DIREITOS RESERVADOS.</span><a href="#inicio">VOLTAR AO TOPO <ArrowDown /></a></div>
+        <div className="footer-bottom"><span>© 2026 STÚDIO M8 | BARBEARIA.</span><span>TODOS OS DIREITOS RESERVADOS.</span><a href="#inicio">VOLTAR AO TOPO <ArrowDown /></a></div>
       </footer>
 
       <button className="whatsapp-float" onClick={requestBooking} aria-label="Agendar pelo WhatsApp">

@@ -7,7 +7,7 @@ export const ASSETS = {
   interior: "/manus-storage/interior_253142cf.jpeg",
   facade: "/manus-storage/fachada1_ed6a2ad8.jpeg",
   haircut: "/manus-storage/CORTE1_1ab034bd.jpg",
-  monogram: "/manus-storage/onmen-monogram_6fdc9c59.png",
+  monogram: "/brand/studio-m8-logo.png",
   grainField: "/manus-storage/onmen-grain-field_9a46c75c.jpg",
   precisionLines: "/manus-storage/onmen-precision-lines_fbe36f0c.png",
   metalSurface: "/manus-storage/onmen-metal-surface_dd8449a6.jpg",
@@ -64,7 +64,7 @@ export const SERVICES = [
 
 export const TEAM_SLOTS = ["01", "02", "03"] as const;
 
-export function getWhatsAppUrl(message = "Olá, gostaria de agendar um horário na ON MEN.") {
+export function getWhatsAppUrl(message = "Olá, gostaria de agendar um horário no Stúdio M8.") {
   if (!CONTACT.whatsappNumber) return null;
   const number = CONTACT.whatsappNumber.replace(/\D/g, "");
   return `https://wa.me/${number}?text=${encodeURIComponent(message)}`;
