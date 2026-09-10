@@ -340,7 +340,7 @@ function Home() {
                 </div>
                 <figcaption><b>O espaço</b><span>Cachambi &amp; Bonsucesso</span></figcaption>
               </figure>
-              <div className="about-note" data-reveal><Scissors strokeWidth={1} /><p>Um lugar pensado para transformar cuidado em presença.</p></div>
+              <div className="about-note" data-reveal><Scissors strokeWidth={1} /><p>Onde duas unidades compartilham o mesmo padrão de excelência.</p></div>
             </div>
           </div>
         </section>
