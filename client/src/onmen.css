@@ -90,7 +90,7 @@ h1, h2, h3 { font-family: "Bebas Neue", sans-serif; font-weight: 400; text-trans
 .mobile-book { position: absolute; left: 28px; right: 28px; bottom: 28px; display: flex; justify-content: space-between; align-items: center; padding: 18px; border: 0; background: var(--paper); color: var(--ink); text-transform: uppercase; font-size: 10px; letter-spacing: .16em; }
 
 .hero { position: relative; height: 100svh; min-height: 720px; overflow: hidden; background: #050505; }
-.hero-photo { position: absolute; inset: -4%; width: 108%; height: 108%; object-fit: cover; object-position: 52% 48%; will-change: transform; }
+.hero-photo { position: absolute; inset: -4%; width: 108%; height: 108%; object-fit: cover; object-position: 52% 48%; opacity: .4; will-change: transform; }
 .hero-shade { position: absolute; inset: 0; background: radial-gradient(circle at 65% 50%,transparent,#0000000d 35%,#000000bf 100%),linear-gradient(90deg,#030303f5,#030303ab 36%,#03030329 72%,#0303035c),linear-gradient(0deg,#000000a8,transparent 45%); }
 .precision-overlay { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: .22; mix-blend-mode: screen; pointer-events: none; }
 .hero-content { position: absolute; z-index: 2; left: 7.2vw; top: 50%; width: min(780px,68vw); transform: translateY(-45%); }
