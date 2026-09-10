@@ -432,13 +432,15 @@ function Home() {
               ))}
             </div>
             <p className="gallery-subheading" data-reveal>Cortes</p>
-            <div className="gallery-grid-more">
-              {GALLERY_CORTES.map((image, index) => (
-                <button key={image.src} className="gallery-item" onClick={() => setLightbox(GALLERY.length + GALLERY_BONSUCESSO.length + index)} data-cursor="view">
-                  <img src={image.src} alt={image.alt} loading="lazy" />
-                  <span><b>{GALLERY.length + GALLERY_BONSUCESSO.length + index + 1}</b>{image.tag}<MoveUpRight /></span>
-                </button>
-              ))}
+            <div className="cortes-marquee" data-reveal>
+              <div className="cortes-marquee-track">
+                {[...GALLERY_CORTES, ...GALLERY_CORTES].map((image, index) => (
+                  <button key={index} className="gallery-item" onClick={() => setLightbox(GALLERY.length + GALLERY_BONSUCESSO.length + (index % GALLERY_CORTES.length))} data-cursor="view">
+                    <img src={image.src} alt={image.alt} loading="lazy" />
+                    <span><b>{GALLERY.length + GALLERY_BONSUCESSO.length + (index % GALLERY_CORTES.length) + 1}</b>{image.tag}<MoveUpRight /></span>
+                  </button>
+                ))}
+              </div>
             </div>
           </div>
         </section>

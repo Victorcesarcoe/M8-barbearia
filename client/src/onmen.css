@@ -193,6 +193,11 @@ h1, h2, h3 { font-family: "Bebas Neue", sans-serif; font-weight: 400; text-trans
 .gallery-subheading { color: var(--champagne); font-size: 9px; letter-spacing: .32em; text-transform: uppercase; margin: 90px 0 30px; padding-top: 40px; border-top: 1px solid var(--hairline); }
 .gallery-grid-more { display: grid; grid-template-columns: repeat(3,1fr); gap: 2vw; }
 .gallery-grid-more .gallery-item { height: 460px; }
+.cortes-marquee { overflow: hidden; width: 100%; -webkit-mask-image: linear-gradient(90deg,transparent,#000 4%,#000 96%,transparent); mask-image: linear-gradient(90deg,transparent,#000 4%,#000 96%,transparent); }
+.cortes-marquee-track { display: flex; gap: 2vw; width: max-content; animation: cortes-marquee 34s linear infinite; }
+.cortes-marquee-track .gallery-item { flex: 0 0 auto; width: min(78vw,340px); height: 460px; }
+.cortes-marquee:hover .cortes-marquee-track { animation-play-state: paused; }
+@keyframes cortes-marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 .gallery-item { position: relative; border: 0; padding: 0; background: #111; overflow: hidden; text-align: left; color: var(--paper); }
 .gallery-item img { width: 100%; height: 100%; object-fit: cover; filter: saturate(.78); transition: transform 1.05s var(--ease-out),filter .6s; }
 .gallery-item::after { content: ""; position: absolute; inset: 0; background: linear-gradient(0deg,#000000bd,transparent 45%); }
