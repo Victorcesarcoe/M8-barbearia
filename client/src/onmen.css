@@ -244,10 +244,13 @@ h1, h2, h3 { font-family: "Bebas Neue", sans-serif; font-weight: 400; text-trans
 .contact-lines { margin: 70px 0 45px; border-top: 1px solid #05050533; }
 .contact-lines > div { display: grid; grid-template-columns: 130px 1fr; border-bottom: 1px solid #05050533; padding: 17px 0; align-items: center; }
 .contact-lines span { color: #666159; font-size: 8px; letter-spacing: .18em; text-transform: uppercase; }
-.contact-lines p,.contact-lines button { font-size: 12px; color: var(--ink); background: none; border: 0; padding: 0; text-align: left; }
-.contact-lines button { display: flex; align-items: center; justify-content: space-between; }
+.contact-lines p,.contact-lines button,.contact-lines a { font-size: 12px; color: var(--ink); background: none; border: 0; padding: 0; text-align: left; text-decoration: none; }
+.contact-lines button,.contact-lines a { display: flex; align-items: center; justify-content: space-between; }
 .contact-lines button svg { width: 14px; }
 .location .magnetic-link { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+.map-placeholder-stack { display: flex; flex-direction: column; gap: 14px; height: 680px; }
+.map-placeholder-stack .map-placeholder { flex: 1; height: auto; }
+.map-placeholder { cursor: pointer; }
 .map-placeholder { position: relative; height: 680px; overflow: hidden; background: #111; color: var(--paper); display: flex; flex-direction: column; align-items: center; justify-content: center; }
 .map-grid-lines { position: absolute; inset: 0; opacity: .22; background-image: linear-gradient(#ffffff33 1px,transparent 1px),linear-gradient(90deg,#ffffff33 1px,transparent 1px); background-size: 75px 75px; transform: perspective(500px) rotateX(55deg) scale(1.55); }
 .map-crosshair { position: relative; width: 82px; height: 82px; margin-bottom: 28px; border: 1px solid #b8a17870; border-radius: 50%; }
@@ -275,9 +278,9 @@ h1, h2, h3 { font-family: "Bebas Neue", sans-serif; font-weight: 400; text-trans
 .footer-main h2 em { color: var(--paper); font-style: normal; }
 .footer-main h2 em::after { content: ""; display: inline-block; width: 55px; height: 1px; margin: 0 0 .2em 16px; background: var(--champagne); }
 .footer-main nav,.footer-social { display: flex; flex-direction: column; gap: 17px; }
-.footer-main nav a,.footer-social button { color: #9c9890; text-decoration: none; text-transform: uppercase; font-size: 9px; letter-spacing: .18em; background: none; border: 0; padding: 0; text-align: left; }
-.footer-main nav a:hover,.footer-social button:hover { color: var(--paper); }
-.footer-social button { display: flex; align-items: center; gap: 10px; }
+.footer-main nav a,.footer-social button,.footer-social a { color: #9c9890; text-decoration: none; text-transform: uppercase; font-size: 9px; letter-spacing: .18em; background: none; border: 0; padding: 0; text-align: left; }
+.footer-main nav a:hover,.footer-social button:hover,.footer-social a:hover { color: var(--paper); }
+.footer-social button,.footer-social a { display: flex; align-items: center; gap: 10px; }
 .footer-social svg { width: 13px; }
 .footer-bottom { display: grid; grid-template-columns: 1fr 1fr auto; gap: 20px; border-top: 1px solid var(--hairline); padding-top: 22px; color: #6f6b65; font-size: 7px; letter-spacing: .18em; }
 .footer-bottom a { color: #aaa59d; text-decoration: none; display: flex; align-items: center; gap: 8px; }
@@ -350,6 +353,7 @@ h1, h2, h3 { font-family: "Bebas Neue", sans-serif; font-weight: 400; text-trans
   .team-slot:last-child { grid-column: 1/3; width: 50%; }
   .location-grid { grid-template-columns: 1fr; }
   .map-placeholder { height: 600px; }
+  .map-placeholder-stack { height: 600px; }
   .footer-main { grid-template-columns: 1fr 1fr; }
   .footer-main h2 { grid-column: 1/3; }
 }
@@ -395,6 +399,7 @@ h1, h2, h3 { font-family: "Bebas Neue", sans-serif; font-weight: 400; text-trans
   .contact-lines { margin: 45px 0 36px; }
   .contact-lines > div { grid-template-columns: 100px 1fr; }
   .map-placeholder { height: 470px; }
+  .map-placeholder-stack { height: 470px; }
   .final-cta { min-height: 760px; }
   .final-cta-content h2 { font-size: 78px; }
   .site-footer { padding: 75px 16px 90px; }

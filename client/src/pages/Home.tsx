@@ -20,7 +20,7 @@ import {
   X,
 } from "lucide-react";
 import { toast } from "sonner";
-import { ASSETS, CONTACT, SERVICES, TEAM_SLOTS, getWhatsAppUrl } from "@/brand";
+import { ASSETS, CONTACT, LOCATIONS, SERVICES, TEAM_SLOTS, getWhatsAppUrl } from "@/brand";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -457,19 +457,27 @@ function Home() {
             <div className="location-copy">
               <SectionEyebrow index="07">Localização</SectionEyebrow>
               <h2 data-reveal>Encontre<br />o Stúdio M8.</h2>
+              {LOCATIONS.map((loc) => (
+                <div className="contact-lines" data-reveal key={loc.name}>
+                  <div><span>Unidade</span><p>{loc.name}</p></div>
+                  <div><span>Endereço</span><p>{loc.address}</p></div>
+                  <div><span>Horário</span><p>{loc.hours}</p></div>
+                </div>
+              ))}
               <div className="contact-lines" data-reveal>
-                <div><span>Endereço</span><p>{CONTACT.address}</p></div>
-                <div><span>Horário</span><p>{CONTACT.hours}</p></div>
                 <div><span>WhatsApp</span><button onClick={requestBooking}>{CONTACT.whatsappDisplay} <ArrowRight /></button></div>
-                <div><span>Instagram</span><p>{CONTACT.instagramHandle}</p></div>
+                <div><span>Instagram</span><a href={CONTACT.instagramUrl} target="_blank" rel="noopener noreferrer">{CONTACT.instagramHandle}</a></div>
               </div>
-              <MagneticLink onClick={() => toast("Mapa em configuração", { description: "Adicione a morada real em client/src/brand.ts." })}>Como chegar</MagneticLink>
             </div>
-            <div className="map-placeholder" data-reveal>
-              <div className="map-grid-lines" />
-              <div className="map-crosshair" aria-hidden="true"><i /><i /></div>
-              <p>Mapa preparado para a morada real</p>
-              <span>ONM / LOCATION — COORDENADAS A CONFIGURAR</span>
+            <div className="map-placeholder-stack">
+              {LOCATIONS.map((loc) => (
+                <a className="map-placeholder" href={loc.mapUrl} target="_blank" rel="noopener noreferrer" data-reveal key={loc.name}>
+                  <div className="map-grid-lines" />
+                  <div className="map-crosshair" aria-hidden="true"><i /><i /></div>
+                  <p>{loc.name}</p>
+                  <span>VER NO GOOGLE MAPS</span>
+                </a>
+              ))}
             </div>
           </div>
         </section>
@@ -493,7 +501,7 @@ function Home() {
           <h2>Estilo.<br />Precisão.<br /><em>Presença.</em></h2>
           <nav>{NAV_ITEMS.slice(0, 5).map(([label, href]) => <a href={href} key={href}>{label}</a>)}</nav>
           <div className="footer-social">
-            <button onClick={() => toast("Instagram em configuração")}>Instagram <Instagram /></button>
+            <a href={CONTACT.instagramUrl} target="_blank" rel="noopener noreferrer">Instagram <Instagram /></a>
             <button onClick={requestBooking}>WhatsApp <MessageCircle /></button>
           </div>
         </div>

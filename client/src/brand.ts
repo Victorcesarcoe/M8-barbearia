@@ -19,19 +19,28 @@ export const CONTACT: {
   bookingUrl: string;
   instagramUrl: string;
   instagramHandle: string;
-  address: string;
-  hours: string;
-  mapUrl: string;
 } = {
   whatsappNumber: "5521995762148",
   whatsappDisplay: "+55 21 99576-2148",
   bookingUrl: "https://cashbarber.com.br/studiom8/login",
-  instagramUrl: "",
-  instagramHandle: "Instagram a configurar",
-  address: "Morada a configurar",
-  hours: "Horário a configurar",
-  mapUrl: "",
+  instagramUrl: "https://www.instagram.com/studiom8_/",
+  instagramHandle: "@studiom8_",
 };
+
+export const LOCATIONS = [
+  {
+    name: "Cachambi",
+    address: "R. Cirne Maia, 78 - Lj F - Cachambi, Rio de Janeiro - RJ, 20771-410",
+    hours: "Seg a Sex: 10:00–20:00 · Sáb: 10:00–19:00 · Dom: Fechado",
+    mapUrl: "https://share.google/QxYjkyzLjbn7F4EGj",
+  },
+  {
+    name: "Bonsucesso",
+    address: "Av. Nova York, 138 - Bonsucesso, Rio de Janeiro - RJ, 21041-040",
+    hours: "Seg a Sex: 10:00–20:00 · Sáb: 10:00–19:00 · Dom: Fechado",
+    mapUrl: "https://share.google/THvrHlvyLdEWUI02l",
+  },
+] as const;
 
 export const SERVICES = [
   {
