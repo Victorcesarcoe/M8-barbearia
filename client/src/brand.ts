@@ -7,13 +7,19 @@ export const ASSETS = {
   interior: "/brand/interior-cachambi.jpg",
   interiorDetail: "/brand/interior-cachambi-detail.jpg",
   facade: "/brand/fachada-cachambi.jpg",
-  haircut: "/manus-storage/CORTE1_1ab034bd.jpg",
+  haircut: "/brand/corte-hero.jpg",
   monogram: "/brand/studio-m8-logo.png",
   grainField: "/manus-storage/onmen-grain-field_9a46c75c.jpg",
   precisionLines: "/manus-storage/onmen-precision-lines_fbe36f0c.png",
   bonsucessoInterior1: "/brand/interior-bonsucesso-1.jpg",
   bonsucessoInterior2: "/brand/interior-bonsucesso-2.jpg",
   bonsucessoInterior3: "/brand/interior-bonsucesso-3.jpg",
+  corte1: "/brand/corte-1.jpg",
+  corte2: "/brand/corte-2.jpg",
+  corte3: "/brand/corte-3.jpg",
+  corte4: "/brand/corte-4.jpg",
+  corte5: "/brand/corte-5.jpg",
+  corte6: "/brand/corte-6.jpg",
 } as const;
 
 export const CONTACT: {

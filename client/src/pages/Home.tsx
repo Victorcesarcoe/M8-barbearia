@@ -45,7 +45,16 @@ const GALLERY_BONSUCESSO = [
   { src: ASSETS.bonsucessoInterior3, alt: "Identidade visual do Stúdio M8 — Unidade Bonsucesso", tag: "Os detalhes" },
 ] as const;
 
-const GALLERY_ALL = [...GALLERY, ...GALLERY_BONSUCESSO];
+const GALLERY_CORTES = [
+  { src: ASSETS.corte1, alt: "Corte masculino realizado no Stúdio M8", tag: "Clássico" },
+  { src: ASSETS.corte2, alt: "Corte criativo com desenho realizado no Stúdio M8", tag: "Criativo" },
+  { src: ASSETS.corte3, alt: "Corte com tatuagem de precisão realizado no Stúdio M8", tag: "Precisão" },
+  { src: ASSETS.corte4, alt: "Corte com fade realizado no Stúdio M8", tag: "Fade" },
+  { src: ASSETS.corte5, alt: "Barba e corte realizados no Stúdio M8", tag: "Barba" },
+  { src: ASSETS.corte6, alt: "Corte com risco de navalha realizado no Stúdio M8", tag: "Navalha" },
+] as const;
+
+const GALLERY_ALL = [...GALLERY, ...GALLERY_BONSUCESSO, ...GALLERY_CORTES];
 
 function BrandLockup({ compact = false }: { compact?: boolean }) {
   return (
@@ -422,6 +431,15 @@ function Home() {
                 </button>
               ))}
             </div>
+            <p className="gallery-subheading" data-reveal>Cortes</p>
+            <div className="gallery-grid-more">
+              {GALLERY_CORTES.map((image, index) => (
+                <button key={image.src} className="gallery-item" onClick={() => setLightbox(GALLERY.length + GALLERY_BONSUCESSO.length + index)} data-cursor="view">
+                  <img src={image.src} alt={image.alt} loading="lazy" />
+                  <span><b>{GALLERY.length + GALLERY_BONSUCESSO.length + index + 1}</b>{image.tag}<MoveUpRight /></span>
+                </button>
+              ))}
+            </div>
           </div>
         </section>
 
@@ -515,7 +533,7 @@ function Home() {
         <div className="lightbox" role="dialog" aria-modal="true" aria-label="Galeria ampliada">
           <button className="lightbox-close" onClick={() => setLightbox(null)} aria-label="Fechar galeria"><X /></button>
           <button className="lightbox-prev" onClick={() => setLightbox((lightbox + GALLERY_ALL.length - 1) % GALLERY_ALL.length)} aria-label="Imagem anterior"><ChevronLeft /></button>
-          <figure><img src={GALLERY_ALL[lightbox].src} alt={GALLERY_ALL[lightbox].alt} /><figcaption><span>0{lightbox + 1} / 0{GALLERY_ALL.length}</span><strong>{GALLERY_ALL[lightbox].tag}</strong></figcaption></figure>
+          <figure><img src={GALLERY_ALL[lightbox].src} alt={GALLERY_ALL[lightbox].alt} /><figcaption><span>{String(lightbox + 1).padStart(2, "0")} / {String(GALLERY_ALL.length).padStart(2, "0")}</span><strong>{GALLERY_ALL[lightbox].tag}</strong></figcaption></figure>
           <button className="lightbox-next" onClick={() => setLightbox((lightbox + 1) % GALLERY_ALL.length)} aria-label="Próxima imagem"><ChevronRight /></button>
         </div>
       )}
