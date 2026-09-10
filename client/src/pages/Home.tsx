@@ -20,7 +20,7 @@ import {
   X,
 } from "lucide-react";
 import { toast } from "sonner";
-import { ASSETS, CONTACT, LOCATIONS, SERVICES, TEAM_SLOTS, getWhatsAppUrl } from "@/brand";
+import { ASSETS, CONTACT, LOCATIONS, SERVICES, getWhatsAppUrl } from "@/brand";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -430,32 +430,10 @@ function Home() {
           </div>
         </section>
 
-        <section className="team section-pad">
-          <img className="team-metal" src={ASSETS.metalSurface} alt="" aria-hidden="true" />
-          <div className="content-wide">
-            <SectionEyebrow index="06">Profissionais</SectionEyebrow>
-            <div className="team-heading" data-reveal><h2>Quem domina<br />o detalhe.</h2><p>Esta área está preparada para receber os profissionais reais do Stúdio M8, sem nomes ou perfis fictícios.</p></div>
-            <div className="team-slots">
-              {TEAM_SLOTS.map((slot) => (
-                <div className="team-slot" key={slot} data-reveal>
-                  <span>ONM / {slot}</span>
-                  <div className="team-placeholder">
-                    <span className="plate-code">RESERVED — PROFILE {slot}</span>
-                    <i aria-hidden="true" />
-                    <b>Identidade em preparação</b>
-                    <small>Dados reais necessários</small>
-                  </div>
-                  <div><strong>Profissional a adicionar</strong><small>Especialidade e Instagram</small></div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
         <section id="contato" className="location section-pad">
           <div className="content-wide location-grid">
             <div className="location-copy">
-              <SectionEyebrow index="07">Localização</SectionEyebrow>
+              <SectionEyebrow index="06">Localização</SectionEyebrow>
               <h2 data-reveal>Encontre<br />o Stúdio M8.</h2>
               {LOCATIONS.map((loc) => (
                 <div className="contact-lines" data-reveal key={loc.name}>

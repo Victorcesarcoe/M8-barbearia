@@ -8,8 +8,7 @@ O site foi preparado para usar exclusivamente dados reais. Os valores estão cen
 | Link de agendamento | `CONTACT.bookingUrl` | Configurado: cashbarber.com.br/studiom8/login |
 | Instagram | `CONTACT.instagramUrl` / `instagramHandle` | Configurado: @studiom8_ |
 | Unidades | `LOCATIONS` (array) | Configurado: Cachambi e Bonsucesso, com endereço, horário e link do mapa |
-| Profissionais | `TEAM_SLOTS` e respetivo componente | Fotografias, nomes, especialidades e perfis reais — por preencher |
 
 As fotografias principais já utilizam os endereços permanentes do projeto. `interior.jpeg` está na Hero, Experiência e CTA final; `fachada1.jpeg` apresenta o estabelecimento; e `CORTE1.jpg` comunica o nível de acabamento nos serviços e na galeria. Os enquadramentos são feitos por CSS e não alteram os ficheiros originais.
 
-O título, a descrição, o idioma, a cor do navegador, os metadados sociais, o favicon, os textos alternativos e o ficheiro `robots.txt` estão configurados. Falta apenas completar os perfis reais da equipa antes da publicação final.
+O título, a descrição, o idioma, a cor do navegador, os metadados sociais, o favicon, os textos alternativos e o ficheiro `robots.txt` estão configurados. O site está pronto para publicação.

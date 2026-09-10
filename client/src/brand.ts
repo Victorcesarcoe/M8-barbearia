@@ -10,7 +10,6 @@ export const ASSETS = {
   monogram: "/brand/studio-m8-logo.png",
   grainField: "/manus-storage/onmen-grain-field_9a46c75c.jpg",
   precisionLines: "/manus-storage/onmen-precision-lines_fbe36f0c.png",
-  metalSurface: "/manus-storage/onmen-metal-surface_dd8449a6.jpg",
 } as const;
 
 export const CONTACT: {
@@ -74,8 +73,6 @@ export const SERVICES = [
     description: "Uma mudança orientada por técnica, identidade e intenção.",
   },
 ] as const;
-
-export const TEAM_SLOTS = ["01", "02", "03"] as const;
 
 export function getWhatsAppUrl(message = "Olá, gostaria de agendar um horário no Stúdio M8.") {
   if (!CONTACT.whatsappNumber) return null;
