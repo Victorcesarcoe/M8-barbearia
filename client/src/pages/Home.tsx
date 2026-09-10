@@ -225,7 +225,7 @@ function Home() {
       });
 
       gsap.utils.toArray<HTMLElement>(".parallax-media").forEach((frame) => {
-        const image = frame.querySelector("img");
+        const image = frame.querySelector<HTMLElement>(".crossfade-photos") || frame.querySelector("img");
         if (!image) return;
         gsap.fromTo(
           image,
@@ -333,8 +333,12 @@ function Home() {
                 <span>STÚDIO M8 | BARBEARIA · EST. —</span>
               </div>
               <figure className="about-photo-wrap parallax-media" data-cursor="view">
-                <img src={ASSETS.facade} alt="Fachada real do Stúdio M8 — Unidade Cachambi" />
-                <figcaption><b>O espaço</b><span>Fachada Cachambi</span></figcaption>
+                <div className="crossfade-photos">
+                  {LOCATIONS.map((loc) => (
+                    <img key={loc.name} src={loc.facade} alt={`Fachada real do Stúdio M8 — Unidade ${loc.name}`} />
+                  ))}
+                </div>
+                <figcaption><b>O espaço</b><span>Cachambi &amp; Bonsucesso</span></figcaption>
               </figure>
               <div className="about-note" data-reveal><Scissors strokeWidth={1} /><p>Um lugar pensado para transformar cuidado em presença.</p></div>
             </div>
