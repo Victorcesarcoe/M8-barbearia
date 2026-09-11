@@ -479,13 +479,11 @@ function Home() {
               {LOCATIONS.map((loc) => (
                 <div className="contact-lines" data-reveal key={loc.name}>
                   <div><span>Unidade</span><p>{loc.name}</p></div>
-                  <div><span>Endereço</span><p>{loc.address}</p></div>
+                  <div><span>Endereço</span><a href={loc.mapUrl} target="_blank" rel="noopener noreferrer" className="address-map-link"><MapPin /> {loc.address}</a></div>
                   <div><span>Horário</span><p>{loc.hours}</p></div>
-                  <div><span></span><a href={loc.mapUrl} target="_blank" rel="noopener noreferrer" className="location-cta">Ver endereço e horário no mapa <ArrowRight /></a></div>
                 </div>
               ))}
               <div className="contact-lines" data-reveal>
-                <div><span>WhatsApp</span><button onClick={requestBooking}>{CONTACT.whatsappDisplay} <ArrowRight /></button></div>
                 <div><span>Instagram</span><a href={CONTACT.instagramUrl} target="_blank" rel="noopener noreferrer">{CONTACT.instagramHandle}</a></div>
               </div>
             </div>
