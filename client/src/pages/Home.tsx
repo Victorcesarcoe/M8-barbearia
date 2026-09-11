@@ -481,6 +481,7 @@ function Home() {
                   <div><span>Unidade</span><p>{loc.name}</p></div>
                   <div><span>Endereço</span><p>{loc.address}</p></div>
                   <div><span>Horário</span><p>{loc.hours}</p></div>
+                  <div><span></span><a href={loc.mapUrl} target="_blank" rel="noopener noreferrer" className="location-cta">Ver endereço e horário no mapa <ArrowRight /></a></div>
                 </div>
               ))}
               <div className="contact-lines" data-reveal>

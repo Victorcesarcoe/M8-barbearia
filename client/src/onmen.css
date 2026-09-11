@@ -241,7 +241,8 @@ h1, h2, h3 { font-family: "Bebas Neue", sans-serif; font-weight: 400; text-trans
 .contact-lines span { color: #666159; font-size: 8px; letter-spacing: .18em; text-transform: uppercase; }
 .contact-lines p,.contact-lines button,.contact-lines a { font-size: 12px; color: var(--ink); background: none; border: 0; padding: 0; text-align: left; text-decoration: none; }
 .contact-lines button,.contact-lines a { display: flex; align-items: center; justify-content: space-between; }
-.contact-lines button svg { width: 14px; }
+.contact-lines button svg,.contact-lines a svg { width: 14px; }
+.location-cta { color: var(--champagne)!important; }
 .location .magnetic-link { background: var(--ink); color: var(--paper); border-color: var(--ink); }
 .map-placeholder-stack { display: flex; flex-direction: column; gap: 14px; height: 680px; }
 .map-placeholder-stack .map-placeholder { flex: 1; height: auto; }
