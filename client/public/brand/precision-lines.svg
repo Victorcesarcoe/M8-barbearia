@@ -1,7 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="240" height="240">
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="480">
   <defs>
-    <pattern id="p" width="40" height="40" patternTransform="rotate(35)" patternUnits="userSpaceOnUse">
-      <line x1="0" y1="0" x2="0" y2="40" stroke="#ffffff" stroke-width="1" opacity="0.55"/>
+    <pattern id="p" width="90" height="90" patternTransform="rotate(35)" patternUnits="userSpaceOnUse">
+      <line x1="0" y1="0" x2="0" y2="90" stroke="#ffffff" stroke-width="0.6" opacity="0.16"/>
     </pattern>
   </defs>
   <rect width="100%" height="100%" fill="url(#p)"/>

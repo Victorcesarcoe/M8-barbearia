@@ -363,7 +363,7 @@ function Home() {
         </section>
 
         <section id="servicos" className="services section-pad">
-          <img className="services-texture" src={ASSETS.grainField} alt="" aria-hidden="true" />
+          <div className="services-texture" aria-hidden="true" />
           <div className="content-wide">
             <SectionEyebrow index="02">Serviços</SectionEyebrow>
             <div className="services-intro" data-reveal>
