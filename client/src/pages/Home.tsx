@@ -263,7 +263,7 @@ function Home() {
           scrollTrigger: {
             trigger: ".space-pin",
             start: "top top",
-            end: () => `+=${track.scrollWidth - window.innerWidth + 500}`,
+            end: () => `+=${track.scrollWidth - window.innerWidth + 1600}`,
             pin: true,
             scrub: 1,
             invalidateOnRefresh: true,
