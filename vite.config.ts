@@ -203,7 +203,19 @@ function vitePluginStorageProxy(): Plugin {
   };
 }
 
-const plugins = [react(), tailwindcss(), jsxLocPlugin(), vitePluginManusRuntime(), vitePluginManusDebugCollector(), vitePluginStorageProxy()];
+// A build feita pelo Vercel (produção pública) não deve carregar o runtime de
+// desenvolvimento/depuração da Manus — ele é pensado só para o ambiente de edição
+// da própria Manus e adiciona ~350KB de script sem uso nenhum no site publicado.
+const isVercelBuild = process.env.VERCEL === "1";
+
+const plugins = [
+  react(),
+  tailwindcss(),
+  jsxLocPlugin(),
+  ...(isVercelBuild ? [] : [vitePluginManusRuntime()]),
+  vitePluginManusDebugCollector(),
+  vitePluginStorageProxy(),
+];
 
 export default defineConfig({
   plugins,
