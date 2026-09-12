@@ -20,6 +20,7 @@ export const ASSETS = {
   corte4: "/brand/corte-4.jpg",
   corte5: "/brand/corte-5.jpg",
   corte6: "/brand/corte-6.jpg",
+  haircutGallery: "/brand/corte-galeria.jpg",
 } as const;
 
 export const CONTACT: {

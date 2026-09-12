@@ -35,7 +35,7 @@ const NAV_ITEMS = [
 
 const GALLERY = [
   { src: ASSETS.interior, alt: "Interior real do Stúdio M8 — Unidade Cachambi", tag: "O ritual" },
-  { src: ASSETS.haircut, alt: "Corte masculino executado no Stúdio M8", tag: "A precisão" },
+  { src: ASSETS.haircutGallery, alt: "Corte masculino executado no Stúdio M8", tag: "A precisão" },
   { src: ASSETS.interiorDetail, alt: "Identidade visual do Stúdio M8 — Unidade Cachambi", tag: "O espaço" },
 ] as const;
 
