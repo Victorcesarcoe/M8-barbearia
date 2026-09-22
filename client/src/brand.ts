@@ -8,7 +8,7 @@ export const ASSETS = {
   interiorDetail: "/brand/interior-cachambi-detail.jpg",
   facade: "/brand/fachada-cachambi.jpg",
   haircut: "/brand/corte-hero.jpg",
-  monogram: "/brand/studio-m8-logo.png",
+  monogram: "/brand/onmen-logo.png",
   grainField: "/brand/grain-texture.png",
   precisionLines: "/brand/precision-lines.svg",
   bonsucessoInterior1: "/brand/interior-bonsucesso-1.jpg",
