@@ -1,4 +1,4 @@
-# Guia de conteúdo — Stúdio M8 | Barbearia
+# Guia de conteúdo — ON MEN Barbearia
 
 O site foi preparado para usar exclusivamente dados reais. Os valores estão centralizados em `client/src/brand.ts`; assim, a equipa pode completar o projeto sem procurar informação dispersa pelos componentes.
 

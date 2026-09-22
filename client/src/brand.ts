@@ -87,7 +87,7 @@ export const SERVICES = [
   },
 ] as const;
 
-export function getWhatsAppUrl(message = "Olá, gostaria de agendar um horário no Stúdio M8.") {
+export function getWhatsAppUrl(message = "Olá, gostaria de agendar um horário na ON MEN.") {
   if (!CONTACT.whatsappNumber) return null;
   const number = CONTACT.whatsappNumber.replace(/\D/g, "");
   return `https://wa.me/${number}?text=${encodeURIComponent(message)}`;
